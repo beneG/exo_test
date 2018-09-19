@@ -78,8 +78,7 @@ transactions! {
 
 impl Transaction for CreateUser {
     fn verify(&self) -> bool {
-        true
-        //self.verify_signature(self.public_key())
+        self.verify_signature(self.public_key())
     }
 
     fn execute(&self, fork: &mut Fork) -> ExecutionResult {

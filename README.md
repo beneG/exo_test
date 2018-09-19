@@ -159,6 +159,7 @@ All parameters are passed through data field in json format
 * `4` make bid
 * `5` close auction
 
+Transaction must be signed by users private key, and this signature must be in `signature` field.  
 
 Examples of each transaction type:
 
@@ -220,11 +221,13 @@ Create auction transaction
 }
 ```
 
-**Make bid transaction**
+Make bid transaction
+
+
 
 In order to get block number and position in block this transaction must be submitted through slightly differrent URL
 
-```127.0.0.1```
+```<host>:8200/api/services/auction/v1/sync_transcactions```
 
 ```javascript
 {
